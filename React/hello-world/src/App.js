@@ -24,9 +24,16 @@ import FocusInput from "./components/FocusInput";
 import FRParentInput from "./components/FRParentInput";
 import PortalDemo from "./components/PortalDemo";
 import Hero from "./components/Hero";
-import ErrorBoundary from './components/ErrorBoundary'
-import ClickCounter from './components/ClickCounter'
-import HoverCounter from './components/HoverCounter'
+import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+import ClickCounterTwo from "./components/ClickCounterTwo";
+import HoverCounterTwo from "./components/HoverCounterTwo";
+import User from "./components/User";
+import ComponentC from "./components/ComponentC";
+import {UserProvider} from "./components/userContext";
+import PostList from "./components/PostList"
+import PostForm from "./components/PostForm"
 
 function App() {
   return (
@@ -75,8 +82,34 @@ function App() {
       <ErrorBoundary>
         <Hero heroName = "Joker"></Hero>
       </ErrorBoundary> */}
-      <ClickCounter name = "Farrukh"/>
-      <HoverCounter/>
+      {/* <ClickCounter name = "Farrukh"/>
+      <HoverCounter/> */}
+      {/* <ClickCounterTwo/>
+      <HoverCounterTwo/>
+      <User render={(isLoggedIn)=> isLoggedIn ? 'Farrukh' : 'Guest'} />
+       */}
+
+      {/* <Counter
+        render={(count, incrementCount) => (
+          <ClickCounterTwo
+            count={count}
+            incrementCount={incrementCount}
+          ></ClickCounterTwo>
+        )}
+      ></Counter>
+       <Counter
+        render={(count, incrementCount) => (
+          <HoverCounterTwo
+            count={count}
+            incrementCount={incrementCount}
+          ></HoverCounterTwo>
+        )}
+      ></Counter> */}
+      {/* <UserProvider value = "Farrukh">
+        <ComponentC />
+      </UserProvider> */}
+      {/* <PostList/> */}
+      <PostForm/>
     </div>
   );
 }
