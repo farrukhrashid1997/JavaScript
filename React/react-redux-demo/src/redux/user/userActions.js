@@ -25,9 +25,7 @@ export const fetchUsersFailure = (error) => {
   };
 };
 
-export const postUsers = (users) => {
-  
-}
+export const postUsers = (users) => {}
 
 export const fetchUsers = () => {
   return (dispatch) => {

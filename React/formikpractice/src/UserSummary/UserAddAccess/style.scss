@@ -1,0 +1,37 @@
+.add-user-access-form-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.add-user-access-fields-container {
+  display: flex;
+  flex: 0.98;
+}
+
+.add-user-access-button-container {
+  display: flex;
+  flex: 0.02;
+  flex-direction: row;
+  cursor: pointer;
+  width: 4%;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  border: solid 0.5px #d9e2e8;
+  margin-left: 7px;
+  color: #003087;
+  box-sizing: border-box;
+}
+
+.user-access-form-error-text {
+  font-size: 0.75rem;
+  color: #da291c;
+  letter-spacing: 0.03333em;
+  line-height: 1.66;
+  margin-bottom: 0px;
+  margin-top: 3px;
+}

@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  min-height: 8vh;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 50%;
+  font-size: 24px;
+}
+
+.link {
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.link a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.link a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+  display: flex;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 32px;
+}
+
+.logo h4 {
+  margin-left: 7px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.main {
+  background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%),
+    url("./background.jpg");
+  height: 100vh;
+  background-size: center;
+  background-position: center;
+}
+
+.hamburger-toggle {
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hamburger-toggle {
+    display: block;
+  }
+  .navlinks {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    align-items: center;
+    width: 100%;
+    top: 8vh;
+    background-color: teal;
+    font-size: 32px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .active {
+    transform: translateX(0%);
+  }
+}
+
+.showcase {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.showcase h1 {
+  font-size: 64px;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+.showcase h2 {
+  font-size: 28px;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 4px;
+}
+
+.showcase p {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.showcase__btn-services {
+  border: white solid 1px;
+  background-color: transparent;
+  color: white;
+  padding: 10px 50px;
+  margin: 0 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.showcase__btn-about {
+  border: white solid 1px;
+  background-color: white;
+  color: rgb(26, 108, 122);
+  padding: 10px 50px;
+  margin: 0 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.showcase__btn-about:hover {
+  border: white solid 1px;
+  background-color: transparent;
+  color: white;
+}
+
+.showcase__btn-services:hover {
+  border: white solid 1px;
+  background-color: white;
+  color: rgb(26, 108, 122);
+}

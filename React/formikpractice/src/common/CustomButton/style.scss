@@ -1,0 +1,46 @@
+.custom-button {
+  cursor: pointer;
+  padding-left: 44px;
+  padding-right: 44px;
+  width: 240px;
+  height: 44px;
+  font-size:16px;
+  border-radius: 3px;
+  color: white;
+  border: 0 !important;
+  outline: none;
+}
+
+.custom-button-primary {
+  background: #003087 !important;
+}
+
+.custom-button-primary:hover {
+  background-color: #7eacff !important;
+}
+
+.custom-button-primary:active {
+  background-color: #637488 !important;
+}
+
+.custom-button-secondary {
+  border: solid 2px #003087 !important;
+  margin-right: 24px;
+  background-color: white !important;
+  color: #003087;
+}
+
+.custom-button-secondary:hover {
+  color: #003087 !important;
+  border-color: #003087;
+}
+
+@media (max-width: 768px) {
+  .custom-button-secondary {
+    margin-right: 0;
+  }
+  .custom-button-secondary:active {
+    color: #637488 !important;
+    border-color: #637488;
+  }
+}

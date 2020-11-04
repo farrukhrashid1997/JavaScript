@@ -1,22 +1,41 @@
 import React from "react";
-import "./MessageInput.css"
+import { useSelector, useDispatch } from "react-redux";
+import "./MessageInput.css";
+import { typingSel, activeUserIdSel } from "../containers/MainSelector";
+import { setTypingValue, sendMessage } from "../actions";
 
-const MessageInput = ({ typing, setTypingValue }) => {
+const MessageInput = () => {
+  const dispatch = useDispatch();
 
-  const handleChange = (e) => {setTypingValue(e.target.value)}
+  const typing = useSelector(typingSel);
+  const activeUserId = useSelector(activeUserIdSel);
+
+  const sendMesDispatch = (typing, activeUserId) =>
+    dispatch(sendMessage(typing, activeUserId));
+  const setTypingDis = (txt) => dispatch(setTypingValue(txt));
+
+  const handleChange = (e) => {
+    setTypingDis(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendMesDispatch(typing, activeUserId);
+    setTypingDis("");
+  };
 
   return (
-    <div>
-      <form className="Message">
+    <form className="Message" onSubmit={handleSubmit}>
+      <div className="Message_input_box">
         <input
           className="Message__input"
           onChange={handleChange}
           value={typing}
           placeholder="write a message"
         ></input>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 };
 
-export default MessageInput
+export default MessageInput;

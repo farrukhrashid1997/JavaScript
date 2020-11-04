@@ -1,0 +1,16 @@
+.add-button-icon {
+  cursor: pointer;
+  width: 90%;
+  max-width: 44px;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+//   box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.05);
+  border: solid 0.5px #d9e2e8;
+  outline: none;
+}
