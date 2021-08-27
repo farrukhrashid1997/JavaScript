@@ -1,2 +1,2 @@
 # JavaScript
-All the practice projects done to learn react, react-native, redux and graphQL
+All the practice projects done to learn react, react-native and  NodeJS 
